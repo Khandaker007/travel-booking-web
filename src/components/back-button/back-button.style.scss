@@ -1,0 +1,34 @@
+@import '../../sass/variable.scss';
+
+.back-button{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;;
+    // background-color: yellowgreen;
+    display: flex;
+    padding: 3px 6px;
+    border: 1px solid #fff;
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .2s;
+    
+
+    &::before{
+        content: '';
+        background-color: #fff;
+        -webkit-mask-image: url(../../assets/icon/arrow-left2.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../../assets/icon/arrow-left2.svg);
+        mask-size: cover;
+        height: 2rem;
+        width: 2rem;
+    }
+    &:hover{
+        opacity: 1;
+    }
+
+    &__icon{
+        // mask-ba
+    }
+}

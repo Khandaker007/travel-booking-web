@@ -1,0 +1,205 @@
+@import '../../sass/variable.scss';
+
+.hotel-view{
+    background-color: #fff;
+    position: relative;
+    // flex: 1;
+
+    .gallery{
+        display: flex;
+        &__item{
+
+        }
+        &__photo{
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .overview{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $color-Grey-light-2;
+        // padding: 1.5rem 2rem;
+        &__heading{
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0 2rem;
+        }
+
+        &__stars{
+            margin-right: auto;
+        }
+        &__icon-star,
+        &__icon-location{
+            height: 1.75rem;
+            width: 1.75rem;
+        }
+        &__icon-location{
+            // cursor: pointer;
+        }
+
+        &__location{
+            display: flex;
+            text-align: center;
+        }
+        &__link-location:link,
+        &__link-location:visited{
+            text-decoration: none;
+            color: $color-Primary;
+            border-bottom: 1px solid currentColor;
+            font-weight: 600;
+        }
+        &__link-location:hover{
+            color: $color-Grey-dark-2;
+        }
+
+        &__rating{
+            // padding: 2rem;
+            color: white;
+            background-color: $color-Primary;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.75rem 2rem;
+            margin-left: 2rem;
+        }
+        &__rating-average{
+            font-size: 2rem;
+        }
+        &__rating-count{
+
+        }
+    }
+    
+    .detail{
+        display: flex;
+        padding: 4.5rem;
+        background-color: $color-Grey-light-1;
+        border-bottom: 1px solid $color-Grey-light-2;
+
+        .description{
+            background-color: #fff;
+            flex: 0 0 60%;
+            margin-right: 4.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: .06);
+
+            .paragraph{
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+            .list{
+                padding: 2rem 0;
+                margin: 2.5rem 0;
+                border-top: 1px solid $color-Grey-light-4;
+                border-bottom: 1px solid $color-Grey-light-4;
+                list-style-type: none;
+
+                display: flex;
+                flex-wrap: wrap;
+                &__item{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    padding: .5rem;
+
+                    flex: 0 0 50%;
+                }
+                &__item:before{
+                    content: '';
+                    height: 1rem;
+                    width: 1rem;
+                    display: inline-block;
+                    margin-right: .7rem;
+
+                    background-color: $color-Primary;
+                    -webkit-mask-image: url(../../assets/icon/chevron-thin-right.svg);
+                    -webkit-mask-size: cover;
+                    mask-image: url(../../assets/icon/chevron-thin-right.svg);
+                    mask-size: cover;
+                }
+                // ICON ON HTML
+                // &__icon-arrow{
+                //     height: 1rem;
+                //     width: 1rem;
+                //     margin-right: .4rem;
+                // }
+            }
+
+            .recommend{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &__count{
+                    font-size: 1.3rem;
+                }
+                &__users{
+
+                }
+                &__user-photo{
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+
+                    &:not(:last-of-type){
+                        margin-right: -1.3rem;
+                    }
+                }
+            }
+        }
+
+        .user-review{
+            // background-color: yellowgreen;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+
+            flex: 1;
+            .btn-more{
+                font-size: 1.4rem;
+                text-decoration: none;
+                color: $color-Primary;
+                border-bottom: 1px solid currentColor;
+                font-weight: 600;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    .book{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+        // background-color: ;
+        &__header{
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+        &__button{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 1.5rem 5rem;
+            border-radius: 100px;
+            background-image: linear-gradient(to right, $color-Primary-light 50%, $color-Primary-dark);
+            border: hidden;
+            color: #fff;
+            margin-top: 3rem;
+            cursor: pointer;
+
+            &:hover{
+                transform: translateY(-3px);
+                box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .2);
+            }
+            &:active{
+                transform: translateY(-1.5px);
+                box-shadow: 0 .5rem 1rem rgba($color: #000000, $alpha: .2);
+            }
+        }
+
+    }
+}

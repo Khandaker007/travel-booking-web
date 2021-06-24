@@ -1,0 +1,71 @@
+@import '../../sass/variable.scss';
+
+.content{
+    background-color: $color-Grey-dark-1;
+    flex: 0 0 18%;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .side-nav{
+        margin-top: 3.5rem;
+        font-size: 1.5rem;
+        &__item{
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            position: relative;
+
+            &:not(:last-child){
+                margin-bottom: .5rem;
+            }
+        }
+        &__item::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $color-Primary;
+            height: 100%;
+            width: .3rem;
+            transform: scaleY(0);
+            transition: transform .2s,
+                        width .4s cubic-bezier(1,0,0,1) .2s;
+        }
+        &__item:hover::before,
+        &__item--active::before{
+            transform: scaleY(1);
+            width: 100%;
+        }
+        &__item:active::before{
+            background-color: $color-Primary-light;
+        }
+
+
+        &__link:link,
+        &__link:visited{
+            text-decoration: none;
+            color: $color-Grey-light-1;
+            display: block;
+            position: relative;
+            z-index: 10;
+
+            display: flex;
+            align-items: center;
+        }
+        &__icon{
+            height: 2rem;
+            width: 2rem;
+            margin: 0 2rem;
+        }
+    }
+
+    .legal{
+        font-size: 1.5rem;
+        padding: 0 2.5rem;
+        text-align: center;
+        color: $color-Grey-light-1;
+    }
+}
+

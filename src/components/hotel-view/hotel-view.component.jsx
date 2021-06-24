@@ -125,7 +125,7 @@ const HotelView = () => (
                     userDate='Jan 15th, 2021'
                     rating='9.5'
                 />
-                <a href="#" className="btn-more">show more &larr;</a>
+                <a href="#" className="btn-more">show more <span>&rarr;</span></a>
             </div>
         </div>
         <div className="book">

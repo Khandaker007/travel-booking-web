@@ -152,10 +152,10 @@
         }
 
         .user-review{
-            // background-color: yellowgreen;
+            // CENTER THE BUTTON APPROCH 1
             display: flex;
             flex-direction: column;
-            // justify-content: center;
+            align-items: center;
 
             flex: 1;
             .btn-more{
@@ -164,8 +164,20 @@
                 color: $color-Primary;
                 border-bottom: 1px solid currentColor;
                 font-weight: 600;
-                margin-right: auto;
-                margin-left: auto;
+
+                // CENTER THE BUTTON APPROCH 2
+                // margin-right: auto;
+                // margin-left: auto;
+                span{
+                    margin-left: 3px;
+                }
+                &:hover{
+                    color: $color-Grey-dark-1;
+
+                    span{
+                        margin-left: 8px;
+                    }
+                }
             }
         }
     }

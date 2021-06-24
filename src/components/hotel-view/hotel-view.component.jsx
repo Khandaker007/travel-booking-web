@@ -132,7 +132,10 @@ const HotelView = () => (
             <p className="book__header">
                 good news! we have 4 free rooms for your selected date!
             </p>
-            <button className="book__button">book now</button>
+            <button className="book__button">
+                <span className='visible'>book now</span>
+                <span className='invisible'>only 4 rooms left</span>
+            </button>
         </div>
 
         <BackButton/>

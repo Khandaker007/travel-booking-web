@@ -182,11 +182,8 @@
         }
     }
     .book{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem;
+        padding: 5rem;
+        text-align: center;
         // background-color: ;
         &__header{
             font-size: 2rem;
@@ -195,22 +192,54 @@
         &__button{
             font-size: 1.5rem;
             text-transform: uppercase;
-            padding: 1.5rem 5rem;
+            // padding: 1.5rem 7.5rem;
             border-radius: 100px;
             background-image: linear-gradient(to right, $color-Primary-light 50%, $color-Primary-dark);
             border: hidden;
             color: #fff;
             margin-top: 3rem;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
 
+            .visible{
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                padding: 1.5rem 7.5rem;
+                transition: all .2s;
+                // padding: 2rem 7.5rem;
+            }
+            .invisible{
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                padding: 1.5rem 0;
+                position: absolute;
+                left: 0;
+                top: -100%;
+                transition: all .2s;
+            }
+
+            &:hover .visible{
+                transform: translateY(100%);
+            }
+            &:hover .invisible{
+                top: 0;
+            }
             &:hover{
-                transform: translateY(-3px);
-                box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .2);
+                background-image: linear-gradient(to left, $color-Primary-light 50%, $color-Primary-dark);
             }
-            &:active{
-                transform: translateY(-1.5px);
-                box-shadow: 0 .5rem 1rem rgba($color: #000000, $alpha: .2);
-            }
+
+            // PREVIOUS HOVER
+            // &:hover{
+            //     transform: translateY(-3px);
+            //     box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .2);
+            // }
+            // &:active{
+            //     transform: translateY(-1.5px);
+            //     box-shadow: 0 .5rem 1rem rgba($color: #000000, $alpha: .2);
+            // }
         }
 
     }

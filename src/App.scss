@@ -1,7 +1,12 @@
 @import '../src/sass/base.scss';
+@import '../src/sass/mixins.scss';
 
 .content{
   display: flex;
+
+  @include response (tab-port){
+    flex-direction: column;
+}
 
   // TEST
   // height: 50rem;

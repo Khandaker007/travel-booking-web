@@ -1,4 +1,5 @@
 @import '../../sass/variable.scss';
+@import '../../sass/mixins.scss';
 
 .content{
     background-color: $color-Grey-dark-1;
@@ -12,13 +13,28 @@
     .side-nav{
         margin-top: 3.5rem;
         font-size: 1.5rem;
+
+        @include response (tab-port){
+            margin-top: 0;
+            display: flex;
+        }
+
         &__item{
             padding: 1.5rem 2rem;
             cursor: pointer;
             position: relative;
+            list-style-type: none;
+
+            @include response (tab-port){
+                flex: 1;
+            }
 
             &:not(:last-child){
                 margin-bottom: .5rem;
+
+                @include response (tab-port){
+                    margin-bottom: 0;
+                }
             }
         }
         &__item::before{
@@ -66,6 +82,10 @@
         padding: 0 2.5rem;
         text-align: center;
         color: $color-Grey-light-1;
+
+        @include response (tab-port){
+            display: none;
+        }
     }
 }
 

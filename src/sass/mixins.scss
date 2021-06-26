@@ -1,6 +1,8 @@
 // MEDIA QUERY MANAGER
 /*
-0 - 600px:       phone
+0 - 430px;       small-phone
+430 - 568px:     medium-phone
+568 - 600px:     phone
 600 - 900px:     tablet portrait
 900 - 1300px:    tablet landscape
 [1300 - 1800px] is where normal style apply
@@ -9,6 +11,8 @@
 
 /*
 $breakpoint arguments choice:
+- s-phone
+- M-phone
 - phone
 - tab-port
 - tab-land
@@ -16,6 +20,12 @@ $breakpoint arguments choice:
 */
 
 @mixin response ($breakpoint){
+    @if $breakpoint == s-phone {
+        @media (max-width: 26.88%) {@content};
+    }
+    @if $breakpoint == M-phone {
+        @media (max-width: 35.5em) {@content};
+    }
     @if $breakpoint == phone {
         @media (max-width: 37.5em) {@content};
     }
